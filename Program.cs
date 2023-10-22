@@ -1,4 +1,6 @@
-namespace di_csharp;
+using DICSharp.Lib;
+
+namespace DICSharp;
 
 public class Program
 {
@@ -9,6 +11,8 @@ public class Program
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+        builder.Services.AddServicesToContainer();
 
         var app = builder.Build();
         if (app.Environment.IsDevelopment())

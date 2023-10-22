@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace di_csharp.Controllers;
+namespace DICSharp.Controllers;
+
 [ApiController]
 [Route("[controller]")]
 public class HelloWorldController : ControllerBase
