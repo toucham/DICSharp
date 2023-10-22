@@ -23,9 +23,11 @@ namespace DICSharp.Services
 
         public void LogUsage()
         {
-            _logger.LogInformation("Singleton ID: " + _singletonService.Id.ToString());
-            _logger.LogInformation("Transient ID: " + _transientService.Id.ToString());
-            _logger.LogInformation("Scoped ID: " + _scopedService.Id.ToString());
+            _logger.LogInformation($"""
+                Singleton ID: {_singletonService.Id} 
+                Transient ID: {_transientService.Id} 
+                Scoped ID: {_scopedService.Id}
+                """);
         }
     }
 }
