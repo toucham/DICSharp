@@ -1,9 +1,11 @@
+using DICSharp.Lib;
 using DICSharp.Services.Scoped;
 using DICSharp.Services.Singleton;
 using DICSharp.Services.Transient;
 
 namespace DICSharp.Services
 {
+    [DILifetime(ServiceLifetime.Scoped)]
     public class LoggerService : ILoggerService
     {
         private readonly ISingletonService _singletonService;
@@ -21,9 +23,9 @@ namespace DICSharp.Services
 
         public void LogUsage()
         {
-            _logger.LogDebug("Singleton ID: " + _singletonService.Id.ToString());
-            _logger.LogDebug("Transient ID: " + _transientService.Id.ToString());
-            _logger.LogDebug("Scoped ID: " + _scopedService.Id.ToString());
+            _logger.LogInformation("Singleton ID: " + _singletonService.Id.ToString());
+            _logger.LogInformation("Transient ID: " + _transientService.Id.ToString());
+            _logger.LogInformation("Scoped ID: " + _scopedService.Id.ToString());
         }
     }
 }

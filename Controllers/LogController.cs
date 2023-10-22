@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DICSharp.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class LogController : ControllerBase
     {
         private readonly ILoggerService _logger;
