@@ -1,6 +1,6 @@
-using DICSharp.Lib;
+using DICSharpDev.Lib;
 
-namespace DICSharp.Services.Transient
+namespace DICSharpDev.Services.Transient
 {
     [DILifetime(ServiceLifetime.Transient)]
     public class TransientService : ITransientService

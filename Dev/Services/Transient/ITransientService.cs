@@ -1,4 +1,4 @@
-namespace DICSharp.Services.Transient
+namespace DICSharpDev.Services.Transient
 {
     public interface ITransientService
     {

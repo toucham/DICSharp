@@ -1,4 +1,4 @@
-namespace DICSharp.Services.Scoped
+namespace DICSharpDev.Services.Scoped
 {
     public interface IScopedService
     {

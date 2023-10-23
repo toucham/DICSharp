@@ -1,9 +1,9 @@
-using DICSharp.Lib;
-using DICSharp.Services.Scoped;
-using DICSharp.Services.Singleton;
-using DICSharp.Services.Transient;
+using DICSharpDev.Lib;
+using DICSharpDev.Services.Scoped;
+using DICSharpDev.Services.Singleton;
+using DICSharpDev.Services.Transient;
 
-namespace DICSharp.Services
+namespace DICSharpDev.Services
 {
     [DILifetime(ServiceLifetime.Scoped)]
     public class LoggerService : ILoggerService

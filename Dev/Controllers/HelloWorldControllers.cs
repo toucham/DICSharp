@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace DICSharp.Controllers;
+namespace DICSharpDev.Controllers;
 
 [ApiController]
 [Route("[controller]")]

@@ -1,6 +1,6 @@
-using DICSharp.Lib;
+using DICSharpDev.Lib;
 
-namespace DICSharp.Services.Scoped
+namespace DICSharpDev.Services.Scoped
 {
     [DILifetime(ServiceLifetime.Scoped)]
     public class ScopedService : IScopedService

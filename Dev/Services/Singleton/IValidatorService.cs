@@ -1,4 +1,4 @@
-namespace DICSharp.Services.Singleton
+namespace DICSharpDev.Services.Singleton
 {
     public interface IValidatorService<T>
     {

@@ -1,8 +1,8 @@
-using DICSharp.Services;
-using DICSharp.Services.Singleton;
+using DICSharpDev.Services;
+using DICSharpDev.Services.Singleton;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DICSharp.Controllers
+namespace DICSharpDev.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -18,7 +18,7 @@ namespace DICSharp.Controllers
             _longValidator = longVal;
         }
 
-        [HttpGet(Name = "Log")]
+        [HttpGet("~/Log")]
         public void Log()
         {
             _logger.LogUsage();

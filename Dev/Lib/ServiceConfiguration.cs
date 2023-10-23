@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Linq;
 
-namespace DICSharp.Lib
+namespace DICSharpDev.Lib
 {
     public static class ServiceConfiguration
     {

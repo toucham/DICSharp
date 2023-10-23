@@ -1,6 +1,6 @@
-using DICSharp.Lib;
+using DICSharpDev.Lib;
 
-namespace DICSharp.Services.Singleton
+namespace DICSharpDev.Services.Singleton
 {
     [DILifetime(ServiceLifetime.Singleton)]
     public class LongValidatorService : IValidatorService<long>

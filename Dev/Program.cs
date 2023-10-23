@@ -1,6 +1,6 @@
-using DICSharp.Lib;
+using DICSharpDev.Lib;
 
-namespace DICSharp;
+namespace DICSharpDev;
 
 public class Program
 {

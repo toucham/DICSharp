@@ -1,4 +1,4 @@
-namespace DICSharp.Services
+namespace DICSharpDev.Services
 {
     public interface ILoggerService
     {
