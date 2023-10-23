@@ -16,7 +16,7 @@ These are all the possible features and cases that the library need to cover. Th
 - [x] able to add service as transient lifetime
 - [x] able to add service as scoped lifetime
 - [ ] able to resolve multiple implementations for one service
-- [ ] able to resolve service with generic
+- [x] able to resolve service with generic
 - [ ] can still add services in multi-assemblies project
 
 ## Dependency Injection
@@ -46,3 +46,14 @@ HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddSingleton<IGenericService<T>, GenericService<T>>();
 ```
+
+### Services with Different Lifetime
+
+It is possible to register the same services with different lifetime; however, the container will inject the lifetime from shortest to longest. For example:
+
+```c#
+services.AddTransient<IMyService, MyService>();
+services.AddSingleton<IMyService, MyService>();
+```
+
+The service container will resolve with a transient `MyService` object, no matter where it is requested. Therefore, it is not **RECOMMENDED** to add different lifetime for one service.
