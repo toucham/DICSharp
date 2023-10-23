@@ -20,9 +20,11 @@ These are all the possible features and cases that the auto-register services li
 - [x] add service as singleton lifetime
 - [x] add service as transient lifetime
 - [x] add service as scoped lifetime
-- [ ] resolve multiple implementations for one service
+- [x] resolve multiple implementations for one service
 - [x] resolve service with generic
 - [x] add services in multi-assemblies project
+
+For multi-assemblies project, we are assuming that project reference assemblies will not have `PublicKeyToken`. It is currently adding only the assemblies without `PublicKeyToken`.
 
 ## Dependency Injection
 
