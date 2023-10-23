@@ -10,8 +10,9 @@ To be able to automatically register services without having to explicitly call 
 
 ### Structure
 
-- The root project will contain the .NET Standard 2.0 lib for running the user to pull and run the automatatic service registeration extension.
-- `Dev` : contains the ASP.NET project that contains the mock extension to automaticreated inside
+- `DIRegisterService` contains the .NET 5.0+ lib with the logic for automatic service registeration extension.
+- `Dev` contains the ASP.NET project that contains the mock extension to automaticreated inside
+- `OtherServices` contains the code for testing multi-assemblies project
 
 ### Possible Cases to Cover
 
@@ -24,7 +25,7 @@ These are all the possible features and cases that the auto-register services li
 - [x] resolve service with generic
 - [x] add services in multi-assemblies project
 
-For multi-assemblies project, we are assuming that project reference assemblies will not have `PublicKeyToken`. It is currently adding only the assemblies without `PublicKeyToken`.
+For multi-assemblies project, we are assuming that project reference assemblies will not have `PublicKeyToken`. It is currently analyzing the assemblies without the `PublicKeyToken` for the classes with the attribute, `DILifetimeAttribute`.
 
 ## Dependency Injection
 
