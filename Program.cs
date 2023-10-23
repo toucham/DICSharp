@@ -12,7 +12,7 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.Services.AddServicesToContainer();
+        builder.Services.RegisterServices();
 
         var app = builder.Build();
         if (app.Environment.IsDevelopment())

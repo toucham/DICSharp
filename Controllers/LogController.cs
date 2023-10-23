@@ -1,22 +1,39 @@
 using DICSharp.Services;
+using DICSharp.Services.Singleton;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DICSharp.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class LogController : ControllerBase
+    public class TestController : ControllerBase
     {
         private readonly ILoggerService _logger;
-        public LogController(ILoggerService logger)
+        private readonly IValidatorService<string> _stringValidator;
+        private readonly IValidatorService<long> _longValidator;
+        public TestController(ILoggerService logger, IValidatorService<string> stringVal, IValidatorService<long> longVal)
         {
             _logger = logger;
+            _stringValidator = stringVal;
+            _longValidator = longVal;
         }
 
         [HttpGet(Name = "Log")]
         public void Log()
         {
             _logger.LogUsage();
+        }
+
+        [HttpGet("~/Validator/String")]
+        public void ValidatorString()
+        {
+            _stringValidator.ValidateType("string");
+        }
+
+        [HttpGet("~/Validator/Long")]
+        public void ValidatorLong()
+        {
+            _longValidator.ValidateType(123);
         }
     }
 }
