@@ -1,4 +1,6 @@
+using System.Reflection;
 using DIRegisterServices;
+
 namespace DICSharpDev;
 
 public class Program
@@ -10,8 +12,8 @@ public class Program
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-
-        builder.Services.RegisterServices();
+        Assembly curr = Assembly.GetExecutingAssembly();
+        builder.Services.RegisterServices(multiAssembly: true, currentAssembly: curr);
 
         var app = builder.Build();
         if (app.Environment.IsDevelopment())

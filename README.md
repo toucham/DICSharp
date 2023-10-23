@@ -15,14 +15,14 @@ To be able to automatically register services without having to explicitly call 
 
 ### Possible Cases to Cover
 
-These are all the possible features and cases that the library need to cover. This means that the library will not get unexpected behavior in any of these cases.
+These are all the possible features and cases that the auto-register services lib able to do. This means that the library will not get unexpected behavior in any of these cases.
 
-- [x] able to add service as singleton lifetime
-- [x] able to add service as transient lifetime
-- [x] able to add service as scoped lifetime
-- [ ] able to resolve multiple implementations for one service
-- [x] able to resolve service with generic
-- [ ] can still add services in multi-assemblies project## D### Possible Cases to Cover
+- [x] add service as singleton lifetime
+- [x] add service as transient lifetime
+- [x] add service as scoped lifetime
+- [ ] resolve multiple implementations for one service
+- [x] resolve service with generic
+- [x] add services in multi-assemblies project
 
 ## Dependency Injection
 
