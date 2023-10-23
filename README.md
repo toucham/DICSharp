@@ -1,12 +1,17 @@
 # DICSharp
 
-## Objective
-
 To be able to automatically register services without having to explicitly call the `.Add{LIFETIME}()` method. The features will include the following:
 
 - using attributes to register services as Singleton, Scope, or Transient.
 - only using the extension `AddServicesToContainer()` in `Program.cs` to register all the services that have the attribute
 - support both multiproject folder structure and simplified folder structure
+
+## Project
+
+### Structure
+
+- The root project will contain the .NET Standard 2.0 lib for running the user to pull and run the automatatic service registeration extension.
+- `Dev` : contains the ASP.NET project that contains the mock extension to automaticreated inside
 
 ### Possible Cases to Cover
 
@@ -17,7 +22,7 @@ These are all the possible features and cases that the library need to cover. Th
 - [x] able to add service as scoped lifetime
 - [ ] able to resolve multiple implementations for one service
 - [x] able to resolve service with generic
-- [ ] can still add services in multi-assemblies project
+- [ ] can still add services in multi-assemblies project## D### Possible Cases to Cover
 
 ## Dependency Injection
 
