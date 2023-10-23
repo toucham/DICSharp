@@ -1,7 +1,8 @@
-using System.Reflection;
-using System.Linq;
+﻿using System.Reflection;
+using DICSharpDev.Lib;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace DICSharpDev.Lib
+namespace DIRegisterServices
 {
     public static class ServiceConfiguration
     {

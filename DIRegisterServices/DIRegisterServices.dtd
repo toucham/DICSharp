@@ -1,0 +1,6 @@
+<!ELEMENT Project (PropertyGroup)>
+<!ATTLIST Project Sdk NMTOKEN #REQUIRED>
+<!ELEMENT PropertyGroup (TargetFramework,ImplicitUsings,Nullable)>
+<!ELEMENT TargetFramework (#PCDATA)>
+<!ELEMENT ImplicitUsings (#PCDATA)>
+<!ELEMENT Nullable (#PCDATA)>

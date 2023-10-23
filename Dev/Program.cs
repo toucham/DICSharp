@@ -1,5 +1,4 @@
-using DICSharpDev.Lib;
-
+using DIRegisterServices;
 namespace DICSharpDev;
 
 public class Program
